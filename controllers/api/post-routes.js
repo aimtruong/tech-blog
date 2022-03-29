@@ -11,7 +11,6 @@ router.get("/", (req, res) => {
             "title", 
             "created_at"
         ],
-        order: [["created_at", "DESC"]],
         include: [
             {
                 model: Comment,
@@ -41,8 +40,7 @@ router.get("/:id", (req, res) => {
             id: req.params.id
         },
         attributes: [
-            "id", 
-            "post_url", 
+            "id",  
             "title", 
             "created_at"
         ],
