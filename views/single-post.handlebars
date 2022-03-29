@@ -4,9 +4,7 @@
         <p>{{post.title}}</p>
     </div>
     <div class="meta">
-        By {{post.user.username}} on {{format_date post.created_at}}
-        |
-        <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" comments.length}}</a>
+        Posted by {{post.user.username}} on {{format_date post.created_at}}
     </div>
 </article>
 
