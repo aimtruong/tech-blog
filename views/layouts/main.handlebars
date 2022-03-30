@@ -14,9 +14,6 @@
   <div class="wrapper">
   
     <header>
-      <h1>
-        <a href="/">The Tech Blog</a>
-      </h1>
       <nav>
         <a href = "/">Home</a>
         {{#if loggedIn}}
@@ -26,15 +23,14 @@
         <a href = "/login">Login</a>
         {{/if}}
       </nav>
+       <h1>
+        <a href="/">The Tech Blog</a>
+      </h1>
     </header>
     
     <main>
       {{{ body }}}
     </main>
-    
-    <footer>
-      Made by Aimee Truong
-    </footer>
   
   </div>
 
