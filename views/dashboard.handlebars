@@ -25,7 +25,7 @@
         <ul>
             {{#each posts as |post|}}
                 <li>
-                    {{> post-info post}}
+                    {{> post-info-dashboard post}}
                 </li>
             {{/each}}
         </ul>
@@ -33,20 +33,16 @@
     {{/if}}
     
     <section>
-        <button id="new-post-btn" type="button">New Post</button>
+        <a href = "/create-post" id="new-post-btn">New Post</a>
     </section>
+    
 </main>
 
-
-<script src = "/javascript/add-post.js"></script>
 
 {{#if loggedIn}}
 <script src = "/javascript/logout.js"></script>
 {{/if}}
 
-</body>
-
-</html>
 
 
 

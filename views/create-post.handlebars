@@ -1,12 +1,28 @@
 
+<header>
+    <nav>
+        <a href = "/">Home</a>
+
+        <a href = "/dashboard">Dashboard</a>
+        <button id = "logout" class = "btn-no-style">Log Out</button>
+
+    </nav>
+    <h1>
+        <a href="/dashboard">Your Dashboard</a>
+    </h1>
+</header>
+
 <section>
 
     <form class="new-post-form">
-        <div>
+        <div class = "title">
+            <p>Create New Post</p>
+        </div>
+        <div class = "post-form">
             <label for="post-title">Title</label>
             <input type="text" id="post-title" name="post-title" />
         </div>
-        <div>
+        <div class = "post-form">
             <label for="post-text">Post</label>
             <input type="text" id="post-text" name="post-text" />
         </div>
@@ -15,3 +31,5 @@
     </form>
 
 </section>
+
+<script src = "/javascript/add-post.js"></script>

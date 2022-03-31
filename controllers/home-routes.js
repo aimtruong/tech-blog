@@ -60,6 +60,15 @@ router.get('/sign-up', (req, res) => {
     res.render('signup');
 });
 
+router.get('/create-post', (req, res) => {
+    if (req.session.loggedIn) {
+        res.render('create-post');
+        return;
+    }
+
+    res.redirect("/");
+});
+
 router.get("/post/:id", (req, res) => {
     Post.findOne({
         where: {
