@@ -24,7 +24,7 @@
 
 
 ## First Look
-
+![first-look.JPG]
 
 
 ## Contributing
