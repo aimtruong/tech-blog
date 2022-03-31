@@ -4,7 +4,6 @@
   --tertiary: #788585;
   --light-dark: #6f6866;
   --dark: #2b221e;
-  --border-radius: .3rem;
 }
 
 * {
@@ -43,13 +42,17 @@ h1{
   background-color: var(--primary);
   padding: 0 10px;
   display: inline-block;
-  border-radius: var(--border-radius);
+  border-radius: 3px;
   box-shadow: 6px 5px var(--light-dark);
 }
 
 h1 a{
   text-decoration: none;
   color: var(--dark);
+}
+
+h2{
+  margin-left: 20px;
 }
 
 article{
@@ -61,17 +64,15 @@ article{
   border-radius: 8px;
 }
 
-.post:hover{
-  background-color: var(--secondary);
-}
-
 .post .title{
   background-color: var(--dark);
+  color: var(--primary);
 }
 
-.post div{
+.post div, .single-post div{
   padding: 10px 15px;
 }
+
 div .title{
   padding: 0 10px;
 }
@@ -103,7 +104,7 @@ ul{
 #new-post-btn{
   background-color: var(--dark);
   color: white;
-  border: 5px solid var(--dark);
+  border: 3px solid var(--dark);
   border-radius: 8px;
   padding: 5px 20px;
   font-size: 16px;
@@ -112,7 +113,7 @@ ul{
 }
 
 .login-form, .signup-form, .new-post-form{
-  border: 5px solid var(--dark);
+  border: 3px solid var(--dark);
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -184,3 +185,75 @@ ul{
   margin-bottom: 20px;
 }
 
+.single-post{
+  border: 3px solid var(--dark);
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.single-post .title, .single-post .meta{
+  background-color: var(--dark);
+  color: var(--primary);
+}
+
+.comment-form{
+  border: 3px solid var(--dark);
+  border-radius: 8px;
+  margin: 0 20px;
+}
+
+.comment-form #line-break{
+  padding: 10px;
+  margin: 0;
+  background-color: var(--dark);
+  color: var(--dark);
+}
+
+.comment-form p{
+  margin-left: 20px;
+}
+
+.comment-form textarea{
+  margin-left: 20px;
+  padding: 10px;
+  width: 96%;
+  margin-bottom: 10px;
+}
+
+.comment-form button{
+  width: 96%;
+  padding: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: var(--dark);
+  border: 3px solid var(--dark);
+  border-radius: 8px;
+  color: var(--secondary);
+}
+
+.comment-form button:hover{
+  background-color: var(--tertiary);
+  color: white;
+  border-color: var(--tertiary);
+}
+
+.comments{
+  border: 3px solid var(--dark);
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.comments #break{
+  padding: 10px;
+  margin: 0;
+  background-color: var(--dark);
+  color: var(--dark);
+}
+
+.comments .comment{
+  padding: 20px;
+}
+
+.comments .comment div{
+  padding: 5px;
+}

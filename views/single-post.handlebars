@@ -1,24 +1,46 @@
 
-<article class="post">
+<header>
+    <nav>
+        <a href = "/">Home</a>
+        
+        {{#if loggedIn}}
+            <a href = "/dashboard">Dashboard</a>
+            <button id = "logout" class = "btn-no-style">Log Out</button>
+        
+        {{else}}
+        <a href = "/login">Login</a>
+    
+        {{/if}}
+
+    </nav>
+    <h1>
+        <a href="/">The Tech Blog</a>
+    </h1>
+</header>
+
+<article class="single-post">
     <div class="title">
-        <a href="/dashboard/edit/{{post.id}}" class="edit-link">{{post.title}}</p>
+        <p>{{post.title}}</p>
+        <div class="meta">
+          Posted by {{post.user.username}} on {{format_date post.created_at}}
+      </div>
     </div>
     <div class = "post-text">
         <p>{{post.post_text}}</p>
     </div>
-    <div class="meta">
-        Posted by {{post.user.username}} on {{format_date post.created_at}}
-    </div>
+    
 </article>
 
 {{#if loggedIn}}
 <form class="comment-form">
+  <p id="line-break">------------</p>
+  <p id="comment">Comment</p>
   <div>
     <textarea name="comment-body"></textarea>
   </div>
 
   <div>
-    <button type="submit">Add Comment</button>
+    <button type="submit">Submit</button>
   </div>
 </form>
 {{/if}}
