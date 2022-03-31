@@ -1,4 +1,5 @@
 
+// function to edit post by getting title and post_text and submitting
 async function editFormHandler(event) {
     event.preventDefault();
   

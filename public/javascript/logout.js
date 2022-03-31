@@ -1,4 +1,5 @@
 
+// function to logout by posting logout into JSON and clicking
 async function logout(){
     const response = await fetch("/api/users/logout", {
         method: "post",

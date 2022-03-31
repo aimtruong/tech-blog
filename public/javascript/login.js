@@ -1,4 +1,5 @@
 
+// function to login by getting username and password into JSON and submitting
 async function loginFormHandler(event) {
     event.preventDefault();
   
@@ -13,7 +14,7 @@ async function loginFormHandler(event) {
                 password
             }),
             headers: { 'Content-Type': 'application/json' }
-      });
+        });
   
         if (response.ok) {
             document.location.replace('/dashboard');

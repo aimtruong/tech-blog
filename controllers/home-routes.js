@@ -3,6 +3,7 @@ const router = require("express").Router();
 const { Post, User, Comment } = require("../models");
 
 
+// GET all posts
 router.get('/', (req, res) => {
     console.log(req.session);
 
@@ -28,20 +29,21 @@ router.get('/', (req, res) => {
             }
         ]
     })
-        .then(dbPostData => {
-            const posts = dbPostData.map(post => post.get({ plain: true }));
+    .then(dbPostData => {
+        const posts = dbPostData.map(post => post.get({ plain: true }));
     
-            res.render('homepage', { 
-                posts,
-                loggedIn: req.session.loggedIn
-            });
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
+        res.render('homepage', { 
+            posts,
+            loggedIn: req.session.loggedIn
         });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
-  
+
+// GET login site
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -51,6 +53,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+// GET signup site
 router.get('/sign-up', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -60,6 +63,7 @@ router.get('/sign-up', (req, res) => {
     res.render('signup');
 });
 
+// GET create-post site
 router.get('/create-post', (req, res) => {
     if (req.session.loggedIn) {
         res.render('create-post');
@@ -69,6 +73,7 @@ router.get('/create-post', (req, res) => {
     res.redirect("/");
 });
 
+// GET a single post 
 router.get("/post/:id", (req, res) => {
     Post.findOne({
         where: {
@@ -94,26 +99,26 @@ router.get("/post/:id", (req, res) => {
                 attributes: ['username']
             }
         ]
-      })
-        .then(dbPostData => {
-            if (!dbPostData) {
-                res.status(404).json({ message: 'No post found with this id' });
-                return;
-            }
+    })
+    .then(dbPostData => {
+        if (!dbPostData) {
+            res.status(404).json({ message: 'No post found with this id' });
+            return;
+        }
     
-            // serialize the data
-            const post = dbPostData.get({ plain: true });
+        // serialize the data
+        const post = dbPostData.get({ plain: true });
     
-            // pass data to template
-            res.render('single-post', {
-                post,
-                loggedIn: req.session.loggedIn
-            });
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
+        // pass data to template
+        res.render('single-post', {
+            post,
+            loggedIn: req.session.loggedIn
         });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
 

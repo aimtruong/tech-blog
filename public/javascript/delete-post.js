@@ -1,4 +1,5 @@
 
+// function to delete post by getting id and clicking
 async function deleteFormHandler(event) {
     event.preventDefault();
   

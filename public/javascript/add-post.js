@@ -1,4 +1,5 @@
 
+// function to add post by getting title and post_text into JSON and submitting
 async function newFormHandler(event) {
     event.preventDefault();
   

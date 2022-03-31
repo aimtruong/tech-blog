@@ -1,3 +1,5 @@
+
+// function to signup by getting username and password into JSON and submitting
 async function signupFormHandler(event) {
     event.preventDefault();
   

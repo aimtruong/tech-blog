@@ -1,4 +1,5 @@
 
+// function to add comment by getting comment_text into JSON and submitting
 async function commentFormHandler(event){
     event.preventDefault();
 

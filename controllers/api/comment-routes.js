@@ -4,6 +4,7 @@ const { Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 
+// GET a comment
 router.get("/", (req, res) => {
     Comment.findAll({
         attributes: [
@@ -20,6 +21,7 @@ router.get("/", (req, res) => {
         });
 });
 
+// POST a comment
 router.post("/", withAuth, (req, res) => {
     // check if session exists
     if(req.session){
@@ -36,6 +38,7 @@ router.post("/", withAuth, (req, res) => {
     }
 });
 
+// DELETE comments
 router.delete("/", withAuth, (req, res) => {
     Comment.destroy({
         where: {
