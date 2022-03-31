@@ -12,21 +12,6 @@
 <body>
 
   <div class="wrapper">
-  
-    <header>
-      <nav>
-        <a href = "/">Home</a>
-        {{#if loggedIn}}
-        <a href = "/dashboard">Dashboard</a>
-        <button id = "logout" class = "btn-no-style">Log Out</button>
-        {{else}}
-        <a href = "/login">Login</a>
-        {{/if}}
-      </nav>
-       <h1>
-        <a href="/">The Tech Blog</a>
-      </h1>
-    </header>
     
     <main>
       {{{ body }}}

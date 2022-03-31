@@ -1,33 +1,54 @@
 
-<section>
-    <h2>Create New Post</h2>
+<header>
+    <nav>
+        <a href = "/">Home</a>
+        
+        {{#if loggedIn}}
+            <a href = "/dashboard">Dashboard</a>
+            <button id = "logout" class = "btn-no-style">Log Out</button>
+        
+        {{else}}
+        <a href = "/login">Login</a>
+    
+        {{/if}}
 
-    <form class="new-post-form">
-    <div>
-        <label for="post-title">Title</label>
-        <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-        <label for="post-text">Post</label>
-        <input type="text" id="post-text" name="post-text" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
+    </nav>
+    <h1>
+        <a href="/dashboard">Your Dashboard</a>
+    </h1>
+</header>
 
-</section>
+<main>
+    {{#if posts.length}}
+    <section>
+        <h2>Your Posts</h2>
+        <ul>
+            {{#each posts as |post|}}
+                <li>
+                    {{> post-info post}}
+                </li>
+            {{/each}}
+        </ul>
+    </section>
+    {{/if}}
+    
+    <section>
+        <button id="new-post-btn" type="button">New Post</button>
+    </section>
+</main>
 
-{{#if posts.length}}
-<section>
-    <h2>Your Posts</h2>
-    <ul>
-        {{#each posts as |post|}}
-        <li>
-            {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-        </li>
-        {{/each}}
-    </ul>
-</section>
-{{/if}}
 
 <script src = "/javascript/add-post.js"></script>
+
+{{#if loggedIn}}
+<script src = "/javascript/logout.js"></script>
+{{/if}}
+
+</body>
+
+</html>
+
+
+
+
+
