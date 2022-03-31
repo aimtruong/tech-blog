@@ -24,7 +24,7 @@
 
 
 ## First Look
-![first-look.JPG]
+![first-look](https://user-images.githubusercontent.com/95596045/160992199-54722e6d-d484-429c-8ef0-b1f5af1a72cf.JPG)
 
 
 ## Contributing
