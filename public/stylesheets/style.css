@@ -112,7 +112,7 @@ ul{
   margin: 0 46%;
 }
 
-.login-form, .signup-form, .new-post-form{
+.login-form, .signup-form, .new-post-form, .edit-post-form{
   border: 3px solid var(--dark);
   margin: 20px;
   display: flex;
@@ -120,13 +120,13 @@ ul{
 
 }
 
-.login-form .title, .signup-form .title, .new-post-form .title{
+.login-form .title, .signup-form .title, .new-post-form .title, .edit-title{
   background-color: var(--dark);
   color: var(--primary);
   padding: 10px 20px;
 }
 
-.login-form .input, .signup-form .input, .new-post-form input{
+.login-form .input, .signup-form .input, .new-post-form input, .edit-post-form input{
   padding-bottom: 5px;
   padding-left: 20px;
   padding-right: 20px;
@@ -136,7 +136,7 @@ ul{
   flex-direction: column;
 }
 
-.login-form button, .signup-form button, .new-post-form button{
+.login-form button, .signup-form button, .new-post-form button, .edit-post-form button{
   text-align: center;
   width: 98%;
   padding: 10px;
@@ -237,12 +237,6 @@ ul{
   border-color: var(--tertiary);
 }
 
-.comments{
-  border: 3px solid var(--dark);
-  border-radius: 8px;
-  margin: 20px;
-}
-
 .comments #break{
   padding: 10px;
   margin: 0;
@@ -256,4 +250,36 @@ ul{
 
 .comments .comment div{
   padding: 5px;
+}
+
+.one-comment{
+  border: 3px solid var(--dark);
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.edit-title{
+  margin: 0;
+}
+
+.edit-post-form div{
+  padding-top: 10px;
+}
+
+.edit-post-form label, .edit-post-form input{
+  padding-left: 20px;
+}
+
+.edit-post-form input{
+  width: 96%;
+}
+
+.edit-post-form button{
+  margin: 5px;
+}
+
+.edit-post-form button:hover{
+  background-color: var(--tertiary);
+  border-color: var(--tertiary);
+  color: white;
 }

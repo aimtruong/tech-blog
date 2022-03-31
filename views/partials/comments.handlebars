@@ -1,13 +1,15 @@
 
 <div class="comments">
   {{#each this}}
-  <p id="break">------------</p>
-  <section class="comment">
-    <div class="text">
-      {{comment_text}}
-    </div>
-    <div class="meta">
-      -- {{user.username}}, {{format_date created_at}}
+  <section class = "one-comment">
+    <p id="break">------------</p>
+    <div class="comment">
+      <div class="text">
+        {{comment_text}}
+      </div>
+      <div class="meta">
+        -- {{user.username}}, {{format_date created_at}}
+      </div>
     </div>
   </section>
   {{/each}}
