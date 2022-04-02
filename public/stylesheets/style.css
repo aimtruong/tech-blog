@@ -6,6 +6,7 @@
   --dark: #2b221e;
 }
 
+/* global */
 * {
   box-sizing: border-box;
   font-family: "IBM Plex Sans", sans-serif;
@@ -16,45 +17,49 @@ body{
   position: relative;
 }
 
+
+/* header */
 header {
   background-color: var(--dark);
+  color: var(--primary);
   padding: 15px;
   padding-left: 40px;
-  color: var(--primary);
 }
 
 header .btn-no-style{
   color: var(--primary);
-  border: none;
-  outline: none;
   background-color: var(--dark);
+  border: none;
   font-size: 16px;
+  outline: none;
 }
 
 nav a{
-  text-decoration: none;
   color: var(--primary);
+  text-decoration: none;
   padding-right: 20px;
 }
 
 h1{
-  font-size: 3rem;
   background-color: var(--primary);
-  padding: 0 10px;
-  display: inline-block;
   border-radius: 3px;
   box-shadow: 6px 5px var(--light-dark);
+  display: inline-block;
+  font-size: 3rem;
+  padding: 0 10px;
 }
 
 h1 a{
-  text-decoration: none;
   color: var(--dark);
+  text-decoration: none;
 }
 
 h2{
   margin-left: 20px;
 }
 
+
+/* post */
 article{
   margin-bottom: 15px; 
 }
@@ -78,10 +83,10 @@ div .title{
 }
 
 .title{
+  align-items: baseline;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
 }
 
 .title a{
@@ -103,20 +108,22 @@ ul{
 
 #new-post-btn{
   background-color: var(--dark);
-  color: white;
   border: 3px solid var(--dark);
   border-radius: 8px;
-  padding: 5px 20px;
+  color: white;
   font-size: 16px;
+  padding: 5px 20px;
   position: absolute;
   margin: 0 46%;
 }
 
+
+/* login/signup/edit-post forms */
 .login-form, .signup-form, .new-post-form, .edit-post-form{
   border: 3px solid var(--dark);
-  margin: 20px;
   display: flex;
   flex-direction: column;
+  margin: 20px;
 
 }
 
@@ -127,39 +134,41 @@ ul{
 }
 
 .login-form .input, .signup-form .input, .new-post-form input, .edit-post-form input{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  margin-left: 20px;
   padding-bottom: 5px;
   padding-left: 20px;
   padding-right: 20px;
-  margin: 10px 0;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
 }
 
 .login-form button, .signup-form button, .new-post-form button, .edit-post-form button{
+  background-color: var(--dark);
+  border-color: var(--dark);
+  border-radius: 8px;
+  color: var(--secondary);
+  margin-left: 20px;
+  padding: 10px;
   text-align: center;
   width: 98%;
-  padding: 10px;
-  margin-left: 20px;
-  background-color: var(--dark);
-  color: var(--secondary);
-  border-radius: 8px;
-  border-color: var(--dark);
 }
 
 .login-form button:hover, .signup-form button:hover, .new-post-form button:hover{
-  color: white;
   background-color: var(--tertiary);
   border-color: var(--tertiary);
+  color: white;
 }
 
 .login-form a, .signup-form a{
-  text-decoration: none;
   color: blue;
-  padding-left: 20px;
   margin: 10px 0;
+  padding-left: 20px;
+  text-decoration: none;
 }
 
+
+/* new-post-form */
 .new-post-form .title{
   padding: 0 20px;
 }
@@ -179,12 +188,14 @@ ul{
 }
 
 .new-post-form button{
+  margin-bottom: 20px;
+  margin-left: 20px;
   width: 96%;
   padding: 10px;
-  margin-left: 20px;
-  margin-bottom: 20px;
 }
 
+
+/* single-post */
 .single-post{
   border: 3px solid var(--dark);
   border-radius: 8px;
@@ -196,6 +207,8 @@ ul{
   color: var(--primary);
 }
 
+
+/* comment-form */
 .comment-form{
   border: 3px solid var(--dark);
   border-radius: 8px;
@@ -203,10 +216,10 @@ ul{
 }
 
 .comment-form #line-break{
-  padding: 10px;
-  margin: 0;
   background-color: var(--dark);
   color: var(--dark);
+  margin: 0;
+  padding: 10px;
 }
 
 .comment-form p{
@@ -214,34 +227,36 @@ ul{
 }
 
 .comment-form textarea{
+  margin-bottom: 10px;
   margin-left: 20px;
   padding: 10px;
   width: 96%;
-  margin-bottom: 10px;
 }
 
 .comment-form button{
-  width: 96%;
-  padding: 10px;
-  margin-left: 20px;
-  margin-bottom: 20px;
   background-color: var(--dark);
   border: 3px solid var(--dark);
   border-radius: 8px;
   color: var(--secondary);
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding: 10px;
+  width: 96%;
 }
 
 .comment-form button:hover{
   background-color: var(--tertiary);
-  color: white;
   border-color: var(--tertiary);
+  color: white;
 }
 
+
+/* comments */
 .comments #break{
-  padding: 10px;
-  margin: 0;
   background-color: var(--dark);
   color: var(--dark);
+  margin: 0;
+  padding: 10px;
 }
 
 .comments .comment{
@@ -258,6 +273,8 @@ ul{
   margin: 20px;
 }
 
+
+/* edit-post form */
 .edit-title{
   margin: 0;
 }
